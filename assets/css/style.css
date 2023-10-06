@@ -1,0 +1,129 @@
+
+* {
+  box-sizing: border-box;
+  background-color: rgb(237, 232, 232);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+
+
+.grid-head{
+  padding-top: 20px;
+
+  grid-area: head;
+  background-color: whitesmoke;
+  height: 200px;
+  font-size: 6rem;
+  text-align: center;
+  color: rgb(226, 176, 26);
+
+}
+
+.grid-nav{
+  grid-area: nav;
+  background-color: black;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 20px;
+
+}
+
+
+.grid-img{
+  grid-area: img;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 40px;
+}
+
+.grid-intro{
+  grid-area: int;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 40px;
+}
+
+
+.grid-projects{
+  grid-area: proj;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 40px;
+}
+
+.grid-contact{
+  grid-area: cont;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 40px;
+}
+
+
+
+.grid-parent{
+
+  /* justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  grid-template-rows: repeat(6,auto);
+  grid-template-areas: 
+  "head head head head head"
+  "nav nav nav nav nav"
+  "int int img img img"
+  "int int img img img"
+  "proj proj proj proj proj"
+  "cont cont cont cont cont"
+  
+  ;
+}
+
+
+
+.flex-nav{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.flex-nav-item{
+  height: 43px;
+  flex: 1;
+  background-color: navy;
+}
+
+.portfolio-flex{
+  flex-direction: row;
+  display:flex;
+  align-items: center;
+  
+}
+
+.portfolio-flx-img{
+  flex: 1;
+  height: 87%;
+  width: 87%;
+}
+#profile-picture{
+  width: 75%;
+  
+}
