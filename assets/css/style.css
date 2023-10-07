@@ -46,8 +46,8 @@ p {
 
   .flex-nav-item {
     text-align: center;
-    /* padding: px; */
-    height: 49px;
+    height: 70px;
+    padding-top: 20px;
     flex: 1;
     background-color: navy;
     color: coral;
@@ -57,36 +57,47 @@ p {
   .grid-parent {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(5, auto);
+    padding: 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 200px 300px 300px 300px;
     grid-template-areas:
-      "head head head head head"
-      "int int img img img"
-      "int int img img img"
+      "head head int int int"
+      "x x img img img"
+      "x x img img img"
       "proj proj proj proj proj"
       "cont cont cont cont cont"
     ;
   }
 
   .grid-head {
-    padding-top: 20px;
     grid-area: head;
     height: auto;
     background-image: url("../images/Profile\ Picture\ 1.jpeg");
     background-repeat:no-repeat;
-    font-size: 400%;
-    text-align: end;
+    background-position:center;
+    justify-content: center;
+    align-items: center;
     color: rgb(226, 176, 26);
+    border-style: solid;
   }
-
-
-
-  #profile-picture {
-    width: 75%;
-    border-radius: 90px;
+    .head-text {
+      display: flex;
+      margin-top: 400px;
+      margin-bottom: 90px;
+      margin-left: 0px;
+      padding-left: 50px;
+      font-size: 4em;
+      background-color: green;
+      border-radius: 0px 35px 35px 0px;
+  
+    }
+  
   }
 
   .grid-intro {
+    padding-top: 40px;
+    padding-right: 25px;
+    padding-left: 30px;
     grid-area: int;
   }
 
@@ -105,7 +116,7 @@ p {
   }
 
 
-}
+
 
 @media screen and (max-width: 700px) {
 
@@ -143,7 +154,7 @@ p {
     grid-area: head;
     display: flex;
     justify-content: start;
-    align-items: end;
+    align-items: center;
     color: rgb(226, 176, 26);
     background-image: url("../images/profile-pic.jpeg");
     background-repeat: no-repeat;
@@ -208,17 +219,3 @@ p {
  */
 
 
-
-
-.portfolio-flex {
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-
-}
-
-.portfolio-flx-img {
-  flex: 1;
-  height: 87%;
-  width: 87%;
-}
