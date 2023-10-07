@@ -1,13 +1,24 @@
-
 * {
   box-sizing: border-box;
-  background-color: rgb(237, 232, 232);
 }
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-color: grey;
+  }
+}
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
 
@@ -24,43 +35,162 @@ p {
   margin: 0;
 }
 
+@media screen and (min-width: 700px) {
+
+  /*nav*/
+  .flex-nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex-nav-item {
+    text-align: center;
+    /* padding: px; */
+    height: 49px;
+    flex: 1;
+    background-color: navy;
+    color: coral;
+    font-size: xx-large;
+  }
+  /*grid-start*/
+  .grid-parent {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "head head head head head"
+      "int int img img img"
+      "int int img img img"
+      "proj proj proj proj proj"
+      "cont cont cont cont cont"
+    ;
+  }
+
+  .grid-head {
+    padding-top: 20px;
+    grid-area: head;
+    height: auto;
+    background-image: url("../images/Profile\ Picture\ 1.jpeg");
+    background-repeat:no-repeat;
+    font-size: 400%;
+    text-align: end;
+    color: rgb(226, 176, 26);
+  }
 
 
-.grid-head{
-  padding-top: 20px;
 
-  grid-area: head;
-  background-color: whitesmoke;
-  height: 200px;
-  font-size: 6rem;
-  text-align: center;
-  color: rgb(226, 176, 26);
+  #profile-picture {
+    width: 75%;
+    border-radius: 90px;
+  }
+
+  .grid-intro {
+    grid-area: int;
+  }
+
+  .grid-projects {
+    grid-area: proj;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: 40px;
+  }
+
+  .grid-contact {
+    grid-area: cont;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: 40px;
+  }
+
 
 }
 
-.grid-nav{
-  grid-area: nav;
-  background-color: black;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 20px;
+@media screen and (max-width: 700px) {
+
+  .flex-nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex-nav-item {
+    text-align: center;
+    margin: 20px;
+    height: 49px;
+    flex: 1;
+    background-color: navy;
+    color: coral;
+    font-size: 1rem;
+  }
+
+
+  .grid-parent {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, 40em);
+    grid-template-areas:
+      "head"
+      "int"
+      "int"
+      "proj"
+      "cont";
+  }
+
+  .grid-head {
+    padding-top: 20px;
+    grid-area: head;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    color: rgb(226, 176, 26);
+    background-image: url("../images/profile-pic.jpeg");
+    background-repeat: no-repeat;
+
+  }
+
+  .head-text {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    padding: 23px;
+    font-size: 4em;
+    background-color: red;
+    border-radius: 0px 35px 35px 0px;
+
+  }
+
+
+  .grid-intro {
+    grid-area: int;
+  }
+
+  .grid-projects {
+    grid-area: proj;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: 40px;
+  }
+
+  .grid-contact {
+    grid-area: cont;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: 40px;
+  }
+
+
 
 }
 
 
-.grid-img{
-  grid-area: img;
-  padding-left: 40px;
-  padding-right: 20px;
-  margin: 40px;
-}
 
-.grid-intro{
+
+
+/* .grid-intro{
   grid-area: int;
-  padding-left: 40px;
-  padding-right: 20px;
-  margin: 40px;
 }
-
 
 .grid-projects{
   grid-area: proj;
@@ -75,55 +205,20 @@ p {
   padding-right: 20px;
   margin: 40px;
 }
+ */
 
 
 
-.grid-parent{
 
-  /* justify-content: center; */
-  display: grid;
-  grid-template-columns: repeat(5,auto);
-  grid-template-rows: repeat(6,auto);
-  grid-template-areas: 
-  "head head head head head"
-  "nav nav nav nav nav"
-  "int int img img img"
-  "int int img img img"
-  "proj proj proj proj proj"
-  "cont cont cont cont cont"
-  
-  ;
-}
-
-
-
-.flex-nav{
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  
-}
-
-.flex-nav-item{
-  height: 43px;
-  flex: 1;
-  background-color: navy;
-}
-
-.portfolio-flex{
+.portfolio-flex {
   flex-direction: row;
-  display:flex;
+  display: flex;
   align-items: center;
-  
+
 }
 
-.portfolio-flx-img{
+.portfolio-flx-img {
   flex: 1;
   height: 87%;
   width: 87%;
-}
-#profile-picture{
-  width: 75%;
-  
 }
