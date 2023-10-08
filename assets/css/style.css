@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -38,9 +38,9 @@ p {
 @media screen and (min-width: 700px) {
 
   #title{
-    background-color: black;
+    background-color: white;
     text-align: center;
-    color: white;
+    color: navy;
     font-size: 16pt;
     padding: 20px
   }
@@ -50,12 +50,12 @@ p {
     display: flex;
     text-align: center;
     align-items: center;
-    background-color: black;
+    background-color: navy;
     border-bottom: 11px;
     border-top: 0px;
     border-left: 0px;
     border-right:0px;
-    border-color: coral;
+    border-color: ;
     border-style:ridge;
   }
 
@@ -64,8 +64,8 @@ p {
     height: 70px;
     padding-top: 20px;
     flex: 1;
-    background-color: black;
-    color: coral;
+    background-color: rgb(2, 2, 83);
+    color: whitesmoke;
     font-size: xx-large;
     margin-bottom: 50px;
   }
@@ -73,18 +73,18 @@ p {
   /*grid-start*/
   .grid-parent {
     display: grid;
-    background-color: black;
+    background-image: url("../images/IMG_0222.png");
+    background-repeat: no-repeat ;
+    background-size: contain;
     padding: 0px;
-    align-items: stretch;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 450px 200px 200px 200px 200px 200px;
+    justify-content: center;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px 200px;
     grid-template-areas:
-      "head head int int int int"
-      "proj-title proj-title proj-2 proj-2 proj-3 proj-3 "
-      "proj-title proj-title proj-2 proj-2 proj-3 proj-3"
-      "proj-4 proj-4 proj-5 proj-5 proj-6 proj-6"
-      "proj-4 proj-4 proj-5 proj-5 proj-6 proj-6"
-      "cont cont cont cont cont cont"
+      "intro-title int head"
+      "proj-title proj-2 proj-3 "
+      "proj-title proj-5 proj-6"
+      "cont cont cont"
     ;
   }
 
@@ -94,13 +94,18 @@ p {
     background-image: url("../images/Profile\ Picture\ 1.jpeg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size:cover;
     color:coral;
     display:flex;
     justify-content: center;
     align-items: flex-end;
-    border-style: solid;
-    margin-left: 70px;
-    margin-right: 70px;
+
+    margin: 50px 12.5px 12.5px 25px;
+
+   
+
+
+  
   }
 
   .head-text {
@@ -110,29 +115,53 @@ p {
     background-color: green; */
   }
 
+  .intro-section-title{
 
-
-  .grid-intro {
-    padding-top: 100px;
-    padding-right: 175px;
-    padding-left: 175px;
-    grid-area: int;
-    background-color: coral;
-    color: black;
-    font-weight: bold;
-    margin-right: 0px;
-    margin-left: 99px;
-  }
-
-  .project-section-title{
-    margin: 40px 35px 35px 50px;
-    padding: 20px 20px 20px 20px;
-    grid-area: proj-title;
-    background-color: black;
-    color: coral;
+    grid-area: intro-title;
+    background-color: rgb(2, 2, 83);
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px 50px 12.5px 50px;
+    border: antiquewhite;
+    border-radius: 5%;
+   
+  }
+
+
+
+  .grid-intro {
+    grid-area: int;
+    background-color: rgb(2, 2, 83);
+    color: white;
+    font-style: italic;
+    margin: 50px 12.5px 12.5px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 20px
+  
+  }
+
+  .grid-intro:hover{
+    background-color: aqua;
+  }
+
+  .project-section-title{
+    /* margin-left: 100px;
+    margin-right: 40px;
+    padding: 20px 20px 20px 20px; */
+    grid-area: proj-title;
+    background-color: rgb(2, 2, 83);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px 12.5px 50px;
+    border-radius: 5%;
+ 
    
   }
 
@@ -147,71 +176,75 @@ p {
     background-color: coral;
   } */
 
-  .grid-project-2 {
-    margin: 40px 35px 35px 50px;
-    grid-area: proj-2;
-    background-image: url("../images/map-project-image.png");
+  .proj-tile{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size:cover;
+    margin: 50px 12.5px 12.5px 25px;
+  }
+
+  #grid-project-2 {
+   
+    grid-area: proj-2;
+    background-image: url("../images/map-project-image.png");
+
 
   }
 
-  .grid-project-3 {
-    margin: 40px 35px 35px 50px;
+  #grid-project-3 {
     grid-area: proj-3;
     background-image: url("../images/Screenshot\ 2023-10-07\ at\ 20.13.37.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-color: black;
+  
     }
 
-  .grid-project-4 {
-    margin: 40px 35px 35px 50px;
+  /* .grid-project-4 {
     grid-area: proj-4;
     background-image: url("../images/map-project-image.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-left: 100px;
 
-  }
+  } */
 
-  .grid-project-5 {
-    margin: 40px 35px 35px 50px;
+  #grid-project-5 {
+    
     grid-area: proj-5;
     background-image: url("../images/map-project-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-color: black;
-
   }
 
-  .grid-project-6 {
-    margin: 40px 35px 35px 50px;
+  #grid-project-6 {
     grid-area: proj-6;
     background-image: url("../images/map-project-image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 
   }
 
   .grid-contact {
-    background-color: coral;
-    width:auto;
-    margin: 20px;
+    background-color: rgb(2, 2, 83);
+    color: white;
+    border-radius: 2%;
     grid-area: cont;
-    margin: 40px 35px 35px 50px;
-    padding: 20px 20px 20px 20px;
+    margin: 50px 0px 12.5px 50px;
+
+ 
+    
   }
     #cont-list{
       list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      justify-content: baseline;
+      font-size: 12pt ;
+
+  
     }
+
     #cont-list li{
       display: inline-block;
-      margin: 25px;
+      margin: 50px 50px 12.5px 50px;
+
+    
     }
 
   }
