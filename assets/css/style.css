@@ -37,11 +37,26 @@ p {
 
 @media screen and (min-width: 700px) {
 
+  #title{
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 16pt;
+    padding: 20px
+  }
+
   /*nav*/
   .flex-nav {
     display: flex;
     text-align: center;
     align-items: center;
+    background-color: black;
+    border-bottom: 11px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right:0px;
+    border-color: coral;
+    border-style:ridge;
   }
 
   .flex-nav-item {
@@ -49,23 +64,27 @@ p {
     height: 70px;
     padding-top: 20px;
     flex: 1;
-    background-color: navy;
+    background-color: black;
     color: coral;
     font-size: xx-large;
+    margin-bottom: 50px;
   }
+
   /*grid-start*/
   .grid-parent {
     display: grid;
-    justify-content: center;
+    background-color: black;
     padding: 0px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 500px 200px 300px 300px 300px;
+    align-items: stretch;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 450px 200px 200px 200px 200px 200px;
     grid-template-areas:
-      "head head int int int"
-      "x x img img img"
-      "x x img img img"
-      "proj proj proj proj proj"
-      "cont cont cont cont cont"
+      "head head int int int int"
+      "proj-title proj-title proj-2 proj-2 proj-3 proj-3 "
+      "proj-title proj-title proj-2 proj-2 proj-3 proj-3"
+      "proj-4 proj-4 proj-5 proj-5 proj-6 proj-6"
+      "proj-4 proj-4 proj-5 proj-5 proj-6 proj-6"
+      "cont cont cont cont cont cont"
     ;
   }
 
@@ -73,133 +92,214 @@ p {
     grid-area: head;
     height: auto;
     background-image: url("../images/Profile\ Picture\ 1.jpeg");
-    background-repeat:no-repeat;
-    background-position:center;
-    justify-content: center;
-    align-items: center;
-    color: rgb(226, 176, 26);
-    border-style: solid;
-  }
-    .head-text {
-      display: flex;
-      margin-top: 400px;
-      margin-bottom: 90px;
-      margin-left: 0px;
-      padding-left: 50px;
-      font-size: 4em;
-      background-color: green;
-      border-radius: 0px 35px 35px 0px;
-  
-    }
-  
-  }
-
-  .grid-intro {
-    padding-top: 40px;
-    padding-right: 25px;
-    padding-left: 30px;
-    grid-area: int;
-  }
-
-  .grid-projects {
-    grid-area: proj;
-    padding-left: 40px;
-    padding-right: 20px;
-    margin: 40px;
-  }
-
-  .grid-contact {
-    grid-area: cont;
-    padding-left: 40px;
-    padding-right: 20px;
-    margin: 40px;
-  }
-
-
-
-
-@media screen and (max-width: 700px) {
-
-  .flex-nav {
-    display: flex;
-    text-align: center;
-    align-items: center;
-  }
-
-  .flex-nav-item {
-    text-align: center;
-    margin: 20px;
-    height: 49px;
-    flex: 1;
-    background-color: navy;
-    color: coral;
-    font-size: 1rem;
-  }
-
-
-  .grid-parent {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, 40em);
-    grid-template-areas:
-      "head"
-      "int"
-      "int"
-      "proj"
-      "cont";
-  }
-
-  .grid-head {
-    padding-top: 20px;
-    grid-area: head;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: rgb(226, 176, 26);
-    background-image: url("../images/profile-pic.jpeg");
     background-repeat: no-repeat;
-
+    background-position: center;
+    color:coral;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-style: solid;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .head-text {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 90px;
-    padding: 23px;
-    font-size: 4em;
-    background-color: red;
-    border-radius: 0px 35px 35px 0px;
-
+    /* display: flex;
+    margin-left: 0px;
+    font-size: 3em;
+    background-color: green; */
   }
+
 
 
   .grid-intro {
+    padding-top: 100px;
+    padding-right: 175px;
+    padding-left: 175px;
     grid-area: int;
+    background-color: coral;
+    color: black;
+    font-weight: bold;
+    margin-right: 0px;
+    margin-left: 99px;
   }
 
-  .grid-projects {
-    grid-area: proj;
-    padding-left: 40px;
-    padding-right: 20px;
-    margin: 40px;
+  .project-section-title{
+    margin: 40px 35px 35px 50px;
+    padding: 20px 20px 20px 20px;
+    grid-area: proj-title;
+    background-color: black;
+    color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  /* .grid-project-1 {
+    margin: 40px 35px 35px 50px;
+    padding: 20px 20px 20px 20px;
+    grid-area: proj-1;
+    background-image: url("../images/map-project-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: coral;
+  } */
+
+  .grid-project-2 {
+    margin: 40px 35px 35px 50px;
+    grid-area: proj-2;
+    background-image: url("../images/map-project-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+  }
+
+  .grid-project-3 {
+    margin: 40px 35px 35px 50px;
+    grid-area: proj-3;
+    background-image: url("../images/Screenshot\ 2023-10-07\ at\ 20.13.37.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: black;
+    }
+
+  .grid-project-4 {
+    margin: 40px 35px 35px 50px;
+    grid-area: proj-4;
+    background-image: url("../images/map-project-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+  }
+
+  .grid-project-5 {
+    margin: 40px 35px 35px 50px;
+    grid-area: proj-5;
+    background-image: url("../images/map-project-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: black;
+
+  }
+
+  .grid-project-6 {
+    margin: 40px 35px 35px 50px;
+    grid-area: proj-6;
+    background-image: url("../images/map-project-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
   }
 
   .grid-contact {
+    background-color: coral;
+    width:auto;
+    margin: 20px;
     grid-area: cont;
-    padding-left: 40px;
-    padding-right: 20px;
-    margin: 40px;
+    margin: 40px 35px 35px 50px;
+    padding: 20px 20px 20px 20px;
+  }
+    #cont-list{
+      list-style: none;
+    }
+    #cont-list li{
+      display: inline-block;
+      margin: 25px;
+    }
+
   }
 
 
 
-}
+
+  @media screen and (max-width: 700px) {
+
+    .flex-nav {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      width:auto;
+    }
+
+    .flex-nav-item {
+      text-align: center;
+      margin: 20px;
+      height: 49px;
+      flex: 1;
+      background-color: navy;
+      color: coral;
+      font-size: 1rem;
+    }
+
+
+    .grid-parent {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, 40em);
+      grid-template-areas:
+        "head"
+        "int"
+        "int"
+        "proj"
+        "cont";
+    }
+
+    .grid-head {
+      padding-top: 20px;
+      grid-area: head;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: rgb(226, 176, 26);
+      background-image: url("../images/profile-pic.jpeg");
+      background-repeat: no-repeat;
+
+    }
+
+    .head-text {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 90px;
+      padding: 23px;
+      font-size: 4em;
+      background-color: red;
+      border-radius: 0px 35px 35px 0px;
+
+    }
+
+    .grid-intro {
+      grid-area: int;
+    }
+
+    .grid-projects {
+      grid-area: proj-1;
+      padding-left: 40px;
+      padding-right: 20px;
+      margin: 40px;
+    }
+
+    .grid-contact {
+      grid-area: cont;
+      padding-left: 40px;
+     
+    }
+
+
+
+  }
 
 
 
 
 
-/* .grid-intro{
+  /* .grid-intro{
   grid-area: int;
 }
 
@@ -217,5 +317,3 @@ p {
   margin: 40px;
 }
  */
-
-
