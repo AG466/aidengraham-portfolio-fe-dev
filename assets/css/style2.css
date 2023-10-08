@@ -28,7 +28,7 @@
 
 
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 300px) and (min-width:899) {
 
     .flex-nav {
       display: flex;

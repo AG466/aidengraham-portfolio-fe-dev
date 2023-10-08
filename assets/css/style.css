@@ -44,7 +44,6 @@ p {
     border-top: 0px;
     border-left: 0px;
     border-right:0px;
-    border-color: ;
     border-style:ridge;
   }
 
@@ -239,6 +238,160 @@ p {
 
   }
 
+  @media screen and (min-width: 300px) and (max-width:899px) {
+
+     /*nav*/
+  .flex-nav {
+    display: flex;
+    justify-content: center;
+    background-color: navy;
+    border-bottom: 11px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right:0px;
+    border-style:ridge;
+  }
+
+  .flex-nav-item {
+    flex-wrap: wrap;
+    text-align: center;
+    height: 70px;
+    padding-top: 5px;
+    flex: 1;
+    background-color: rgb(2, 2, 83);
+    color: whitesmoke;
+    font-size: 12pt;
+    margin-bottom: 12px;
+  }
+
+    .grid-parent {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "head"
+        "intro-title"
+        "int"
+        "proj-title"
+        "proj-2"
+        "proj-3"
+        "cont";
+    }
+
+    .grid-head {
+      grid-area: head;
+      size: auto;
+    }
+  
+    .flex1 {
+      flex-wrap: wrap;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+    }
+  
+     #pro-pic{
+      max-width: 100%; 
+      max-height: 100%; 
+      width: auto; 
+      height: auto;
+      
+     
+     }
+  
+    .intro-section-title{
+
+      grid-area: intro-title;
+      background-color: rgb(2, 2, 83);
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 50px 12.5px 50px;
+      border: antiquewhite;
+      border-radius: 5%;
+     
+    }
+
+
+     .grid-intro {
+      grid-area: int;
+      background-color: rgb(2, 2, 83);
+      color: white;
+      font-style: italic;
+      margin: 10px 10px 10px 10px;
+      padding: 30px 30px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+    }
+  
+    .project-section-title{
+
+      grid-area: proj-title;
+      background-color: rgb(2, 2, 83);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 50px 12.5px 50px;
+      border-radius: 5%;
+   
+     
+    }
+    
+    #grid-project-2 {
+   
+      grid-area: proj-2;
+      background-image: url("../images/map-project-image.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 40px;
+    }
+
+    #grid-project-3 {
+      grid-area: proj-3;
+      background-image: url("../images/Screenshot\ 2023-10-07\ at\ 20.13.37.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 40px;
+    }
+      }
+
+    .grid-contact {
+      background-color: rgb(2, 2, 83);
+      color: white;
+      border-radius: 2%;
+      grid-area: cont;
+      margin: 50px 12.5px 10px 10pxpx;
+      
+    }
+  
+    
+
+    #cont-list{
+        list-style: none;
+        align-items: baseline;
+        justify-content: baseline;
+        font-size: 12pt ;
+  
+    
+    }
+  
+    #cont-list li{
+        margin: 50px 50px 12.5px 50px;
+  
+      
+    }
+  
+
+
+
+
+  }
 
 
 
