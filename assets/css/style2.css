@@ -1,0 +1,293 @@
+
+@media screen and (min-width: 800px){
+    #title{
+      background-color: white;
+      text-align: center;
+      color: navy;
+      font-size: 16pt;
+      padding: 20px
+    }
+  
+    /*nav*/
+    .flex-nav {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      background-color: navy;
+      border-bottom: 11px;
+      border-top: 0px;
+      border-left: 0px;
+      border-right:0px;
+      border-color: ;
+      border-style:ridge;
+    }
+  
+    .flex-nav-item {
+      text-align: center;
+      height: 70px;
+      padding-top: 20px;
+      flex: 1;
+      background-color: rgb(2, 2, 83);
+      color: whitesmoke;
+      font-size: xx-large;
+      margin-bottom: 50px;
+    }
+  
+    /*grid-start*/
+    .grid-parent {
+      display: grid;
+      background-image: url("../images/IMG_0222.png");
+      background-repeat: no-repeat ;
+      background-size: contain;
+      padding: 0px;
+      justify-content: center;
+      grid-template-columns: 200px 200px 200px;
+      grid-template-rows: 200px 200px 200px 200px;
+      grid-template-areas:
+        "intro-title int head"
+        "proj-title proj-2 proj-3 "
+        "proj-title proj-5 proj-6"
+        "cont cont cont"
+      ;
+    }
+  
+    .grid-head {
+      grid-area: head;
+      height: auto;
+      background-image: url("../images/Profile\ Picture\ 1.jpeg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:cover;
+      color:coral;
+      display:flex;
+      justify-content: center;
+      align-items: flex-end;
+  
+      margin: 50px 12.5px 12.5px 25px;
+  
+     
+  
+  
+    
+    }
+  
+    .head-text {
+      /* display: flex;
+      margin-left: 0px;
+      font-size: 3em;
+      background-color: green; */
+    }
+  
+    .intro-section-title{
+  
+      grid-area: intro-title;
+      background-color: rgb(2, 2, 83);
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 50px 12.5px 50px;
+      border: antiquewhite;
+      border-radius: 5%;
+     
+    }
+  
+  
+  
+    .grid-intro {
+      grid-area: int;
+      background-color: rgb(2, 2, 83);
+      color: white;
+      font-style: italic;
+      margin: 50px 12.5px 12.5px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 20px 20px 20px
+    
+    }
+  
+    .grid-intro:hover{
+      background-color: aqua;
+    }
+  
+    .project-section-title{
+      /* margin-left: 100px;
+      margin-right: 40px;
+      padding: 20px 20px 20px 20px; */
+      grid-area: proj-title;
+      background-color: rgb(2, 2, 83);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 50px 12.5px 50px;
+      border-radius: 5%;
+   
+     
+    }
+  
+    /* .grid-project-1 {
+      margin: 40px 35px 35px 50px;
+      padding: 20px 20px 20px 20px;
+      grid-area: proj-1;
+      background-image: url("../images/map-project-image.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: coral;
+    } */
+  
+    .proj-tile{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:cover;
+      margin: 50px 12.5px 12.5px 25px;
+    }
+  
+    #grid-project-2 {
+     
+      grid-area: proj-2;
+      background-image: url("../images/map-project-image.png");
+  
+  
+    }
+  
+    #grid-project-3 {
+      grid-area: proj-3;
+      background-image: url("../images/Screenshot\ 2023-10-07\ at\ 20.13.37.png");
+    
+      }
+  
+    /* .grid-project-4 {
+      grid-area: proj-4;
+      background-image: url("../images/map-project-image.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: 100px;
+  
+    } */
+  
+    #grid-project-5 {
+      
+      grid-area: proj-5;
+      background-image: url("../images/map-project-image.png");
+    }
+  
+    #grid-project-6 {
+      grid-area: proj-6;
+      background-image: url("../images/map-project-image.png");
+  
+    }
+  
+    .grid-contact {
+      background-color: rgb(2, 2, 83);
+      color: white;
+      border-radius: 2%;
+      grid-area: cont;
+      margin: 50px 0px 12.5px 50px;
+  
+   
+      
+    }
+      #cont-list{
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        justify-content: baseline;
+        font-size: 12pt ;
+  
+    
+      }
+  
+      #cont-list li{
+        display: inline-block;
+        margin: 50px 50px 12.5px 50px;
+        
+      
+      }
+  
+    }
+  
+  
+
+
+
+  @media screen and (max-width: 500px) {
+
+    .flex-nav {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      width:auto;
+    }
+
+    .flex-nav-item {
+      text-align: center;
+      margin: 20px;
+      height: 49px;
+      flex: 1;
+      background-color: navy;
+      color: coral;
+      font-size: 1rem;
+    }
+
+
+    .grid-parent {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(5, 40em);
+      grid-template-areas:
+        "head"
+        "int"
+        "int"
+        "proj"
+        "cont";
+    }
+
+    .grid-head {
+      padding-top: 20px;
+      grid-area: head;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: rgb(226, 176, 26);
+      background-image: url("../images/profile-pic.jpeg");
+      background-repeat: no-repeat;
+
+    }
+
+    .head-text {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 90px;
+      padding: 23px;
+      font-size: 4em;
+      background-color: red;
+      border-radius: 0px 35px 35px 0px;
+
+    }
+
+    .grid-intro {
+      grid-area: int;
+    }
+
+    .grid-projects {
+      grid-area: proj-1;
+      padding-left: 40px;
+      padding-right: 20px;
+      margin: 40px;
+    }
+
+    .grid-contact {
+      grid-area: cont;
+      padding-left: 40px;
+     
+    }
+
+
+
+  }

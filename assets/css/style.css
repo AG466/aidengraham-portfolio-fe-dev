@@ -2,17 +2,6 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 700px) {
-  body {
-    background-color: lightgreen;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  body {
-    background-color: grey;
-  }
-}
 
 
 body {
@@ -35,7 +24,7 @@ p {
   margin: 0;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
 
   #title{
     background-color: white;
@@ -60,6 +49,8 @@ p {
   }
 
   .flex-nav-item {
+    flex-wrap: wrap;
+
     text-align: center;
     height: 70px;
     padding-top: 20px;
@@ -73,47 +64,41 @@ p {
   /*grid-start*/
   .grid-parent {
     display: grid;
-    background-image: url("../images/IMG_0222.png");
-    background-repeat: no-repeat ;
-    background-size: contain;
+
     padding: 0px;
     justify-content: center;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 400px 400px 400px 200px;
     grid-template-areas:
       "intro-title int head"
-      "proj-title proj-2 proj-3 "
-      "proj-title proj-5 proj-6"
+      "proj-title proj-2 proj-2 "
+      "proj-title proj-3 proj-5"
       "cont cont cont"
     ;
   }
 
   .grid-head {
     grid-area: head;
-    height: auto;
-    background-image: url("../images/Profile\ Picture\ 1.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    color:coral;
-    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 50px 12.5px 12.5px 25px;
+  }
+
+  .flex1 {
+    flex-wrap: wrap;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    margin: 50px 12.5px 12.5px 25px;
+   }
 
-   
-
-
-  
-  }
-
-  .head-text {
-    /* display: flex;
-    margin-left: 0px;
-    font-size: 3em;
-    background-color: green; */
-  }
+   #pro-pic{
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+    width: auto; /* Allow the image to shrink to fit the container's width */
+    height: auto;
+   }
 
   .intro-section-title{
 
@@ -187,6 +172,7 @@ p {
    
     grid-area: proj-2;
     background-image: url("../images/map-project-image.png");
+    
 
 
   }
@@ -229,6 +215,10 @@ p {
  
     
   }
+
+  .img-txt-proj{
+    background-color: white;
+  }
     #cont-list{
       list-style: none;
       display: flex;
@@ -246,85 +236,6 @@ p {
 
     
     }
-
-  }
-
-
-
-
-  @media screen and (max-width: 700px) {
-
-    .flex-nav {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      width:auto;
-    }
-
-    .flex-nav-item {
-      text-align: center;
-      margin: 20px;
-      height: 49px;
-      flex: 1;
-      background-color: navy;
-      color: coral;
-      font-size: 1rem;
-    }
-
-
-    .grid-parent {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(5, 40em);
-      grid-template-areas:
-        "head"
-        "int"
-        "int"
-        "proj"
-        "cont";
-    }
-
-    .grid-head {
-      padding-top: 20px;
-      grid-area: head;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      color: rgb(226, 176, 26);
-      background-image: url("../images/profile-pic.jpeg");
-      background-repeat: no-repeat;
-
-    }
-
-    .head-text {
-      display: flex;
-      margin-top: 20px;
-      margin-bottom: 90px;
-      padding: 23px;
-      font-size: 4em;
-      background-color: red;
-      border-radius: 0px 35px 35px 0px;
-
-    }
-
-    .grid-intro {
-      grid-area: int;
-    }
-
-    .grid-projects {
-      grid-area: proj-1;
-      padding-left: 40px;
-      padding-right: 20px;
-      margin: 40px;
-    }
-
-    .grid-contact {
-      grid-area: cont;
-      padding-left: 40px;
-     
-    }
-
-
 
   }
 
