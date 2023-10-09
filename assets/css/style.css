@@ -9,6 +9,7 @@ body {
   padding: 0;
   font-family: "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
   line-height: 1.5;
+  background-color: rgb(2, 2, 83);
   
 }
 
@@ -42,11 +43,12 @@ p {
     text-align: center;
     align-items: center;
     background-color: rgb(2, 2, 83);
-    border-bottom: 11px;
+    border-bottom: 3px;
     border-top: 0px;
     border-left: 0px;
     border-right:0px;
-    border-style:ridge;
+    border-style:dotted;
+    border-color:navajowhite;
   }
 
   .flex-nav-item {
@@ -63,7 +65,7 @@ p {
 
   .flex-nav-item:hover{
     color: rgb(2, 2, 83);
-    background: white;
+    background: navajowhite;
     cursor:pointer;
     text-decoration: none;
 
@@ -142,12 +144,17 @@ p {
     border-left: 0pt;
     border-top: 0pt;
     border-bottom: 0pt;
-    border-color:white;
+    border-color:navajowhite;
     border-style: solid;
   }
 
   .intro-section-title:hover{
-    background-color: white;
+    background-color: navajowhite;
+    color: rgb(2, 2, 83);
+  }
+
+  .grid-intro:hover{
+    background-color: navajowhite;
     color: rgb(2, 2, 83);
   }
 
@@ -155,7 +162,7 @@ p {
   .intro-section-title:hover + .flex1
   {
     border: 1pt;
-    border-color: white;
+    border-color: navajowhite;
     border-style: solid;
   }
 
@@ -174,10 +181,7 @@ p {
   
   }
 
-  .grid-intro:hover{
-    background-color: whitesmoke;
-    color: rgb(2, 2, 83);
-  }
+ 
 
   .project-section-title{
     /* margin-left: 100px;
@@ -194,14 +198,14 @@ p {
     border-left: 0pt;
     border-top: 0pt;
     border-bottom: 0pt;
-    border-color:white;
+    border-color:navajowhite;
     border-style: solid;
 
    
   }
 
   .project-section-title:hover{
-    background-color: white;
+    background-color: navajowhite;
     color: rgb(2, 2, 83);
   }
 
@@ -338,8 +342,8 @@ p {
       flex-wrap: wrap;
       align-items: baseline;
       justify-content: center;
-      font-size: 8pt ;
-      color: cornsilk;
+      font-size: 11pt ;
+      color: navajowhite;
       text-decoration: none;
   
     }
@@ -360,23 +364,26 @@ p {
 
 
   @media screen and (min-width: 300px) and (max-width:899px) {
+    
     #title{
-      background-color: white;
+      background-color: navajowhite;
       text-align: center;
-      color: navy;
       font-size: 16pt;
-      padding: 20px
+      padding: 20px;
     }
+
+
      /*nav*/
   .flex-nav {
     display: flex;
     justify-content: center;
-    background-color: navy;
-    border-bottom: 11px;
+    background-color: rgb(2, 2, 83);
+    border-bottom: 5px;
     border-top: 0px;
     border-left: 0px;
     border-right:0px;
-    border-style:ridge;
+    border-color: navajowhite;
+    border-style:dotted;
   }
 
   .flex-nav-item {
@@ -391,11 +398,35 @@ p {
     margin-bottom: 12px;
   }
 
+  .flex-nav-item:hover{
+    color: rgb(2, 2, 83);
+    background: navajowhite;
+    cursor:pointer;
+    text-decoration: none;
+
+  }
+
+   #nav-link:visited{
+
+    color: white;
+
+  } 
+
+  #nav-link:link{
+    color: white;
+   
+  }
+
+  #nav-link:hover{
+    color: rgb(2, 2, 83);
+  }
+
+
     .grid-parent {
       display: grid;
       grid-template-columns: auto;
       background-color: rgb(2, 2, 83) ;
-      grid-template-rows: 1fr 0.25fr 1fr 0.25fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.1fr 0.1fr 0.25fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
         "head"
         "intro-title"
@@ -403,6 +434,7 @@ p {
         "proj-title"
         "proj-2"
         "proj-3"
+        "proj-5"
         "cont";
     }
 
@@ -422,10 +454,14 @@ p {
      #pro-pic{
       max-width: 100%; 
       max-height: 100%;
-      margin: 15px;
-      padding: 10px;
+      margin: 40px;
+      padding: 50px;
       width: auto; 
       height: auto;
+      border-radius: 50%;
+      border-color: navajowhite;
+      border-width: 3px;
+      border-style: groove;
       
      
      }
@@ -434,7 +470,8 @@ p {
 
       grid-area: intro-title;
       background-color: rgb(2, 2, 83);
-      color: whitesmoke;
+      color: navajowhite;
+      text-decoration:underline;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -452,11 +489,15 @@ p {
       color: white;
       font-style: italic;
       margin: 10px 10px 10px 10px;
-      padding: 30px 30px 30px 30px;
+      padding: 30px 70px 30px 70px;
       display: flex;
+      text-align: center;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      border: 0px 0px 0px 0px;
+      border-color: navajowhite;
+      border-style: dashed;
     
     }
   
@@ -464,7 +505,8 @@ p {
 
       grid-area: proj-title;
       background-color: rgb(2, 2, 83);
-      color: white;
+      color: navajowhite;
+      text-decoration: underline;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -473,28 +515,80 @@ p {
    
      
     }
+
+    .img-title-text{
+      background:whitesmoke;
+      color: black;
+    }
     
     #grid-project-2 {
    
       grid-area: proj-2;
       background-image: url("../images/map-project-image.png");
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       margin: 40px;
+    }
+
+    #map-build-txt{
+      display: none;
+    }
+  
+    #grid-project-2:hover #map-build-txt{
+      display: inline;
+      grid-area: proj-2;
+      background-color: black;
+      color: white;
     }
 
     #grid-project-3 {
       grid-area: proj-3;
       background-image: url("../images/Screenshot\ 2023-10-07\ at\ 20.13.37.png");
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       margin: 40px;
     }
+      
+
+      #horiseon-txt{
+        display: none;
+     
       }
+    
+      #grid-project-3:hover #horiseon-txt{
+        display: inline;
+        grid-area: proj-3;
+        background-color: black;
+        color: white;
+      }
+    
+      #grid-project-5 {
+        grid-area: proj-5;
+        background-image: url("../images/grasko-handel.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 40px;
+      }
+
+      #grsk-txt{
+        display: none;
+    
+      }
+    
+      #grid-project-5:hover #grsk-txt{
+        display: inline;
+        grid-area: proj-5;
+        background-color: black;
+        color: white;
+      }
+    
+
+
+      /*contact section*/
 
     .grid-contact {
       background-color: rgb(2, 2, 83);
-      color: white;
+      color: navajowhite;
       border-radius: 2%;
       grid-area: cont;
       margin: 50px 12.5px 10px 10pxpx;
